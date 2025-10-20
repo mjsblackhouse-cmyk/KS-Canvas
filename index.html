@@ -1,142 +1,269 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Virtues Assessment Report: Karin Strachan (Neutral Version)</title>
+  <title>Exhibit | Virtues Assessment Report: Karin Strachan</title>
   <style>
-    body {font-family: system-ui, sans-serif; margin: 2rem; background: #fafafa; color: #1e293b; line-height: 1.6;}
-    h1, h2, h3 {color: #0f172a;}
-    h1 {font-size: 2rem; margin-bottom: 0.5rem;}
-    h2 {font-size: 1.5rem; margin-top: 2rem;}
-    h3 {font-size: 1.2rem; margin-top: 1.2rem;}
-    p {margin-bottom: 1rem;}
-    ul {margin-left: 1.5rem;}
-    li {margin-bottom: 0.5rem;}
-    section {background: #fff; border-radius: 0.75rem; padding: 1.5rem; margin-bottom: 2rem; box-shadow: 0 1px 4px rgba(0,0,0,0.08);}
+    :root {
+      --bg: #f6f8fb;
+      --ink: #0b1220;
+      --muted: #4b5563;
+      --rule: #e5e7eb;
+      --accent-1: #0ea5e9;  /* sky */
+      --accent-2: #6366f1;  /* indigo */
+      --accent-3: #10b981;  /* emerald */
+      --accent-4: #f59e0b;  /* amber */
+      --badge-bg: #eef6ff;
+      --card: #ffffff;
+      --shadow: 0 10px 30px rgba(2, 6, 23, 0.07);
+    }
+    html, body { height: 100%; }
+    body { margin:0; background:var(--bg); color:var(--ink); font: 16px/1.6 system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial; }
+    .wrap { max-width: 1120px; margin: 40px auto 96px; padding: 0 24px; }
+
+    /* HERO */
+    header.hero {
+      background: linear-gradient(135deg, var(--accent-2), var(--accent-1));
+      color: white;
+      padding: 28px 24px;
+      border-radius: 20px;
+      box-shadow: var(--shadow);
+      position: relative;
+      overflow: hidden;
+    }
+    header.hero:after {
+      content: "";
+      position: absolute;
+      right: -60px; top: -60px;
+      width: 220px; height: 220px;
+      border-radius: 50%;
+      background: radial-gradient(circle at center, rgba(255,255,255,0.35), rgba(255,255,255,0));
+      filter: blur(2px);
+    }
+    h1 { font-size: clamp(28px, 4vw, 40px); margin:0 0 6px 0; line-height:1.08; letter-spacing:-0.015em; }
+    .sub { opacity: 0.9; font-size: 14px; }
+
+    /* CARDS */
+    .card { background:var(--card); border:1px solid var(--rule); border-radius:20px; padding:24px; box-shadow: var(--shadow); margin-top: 16px; }
+
+    /* TOC */
+    .toc { display:grid; grid-template-columns: repeat(auto-fit, minmax(220px,1fr)); gap:8px 16px; margin: 8px 0 4px; }
+    .toc a { color: #0b1220; text-decoration: none; font-weight:600; background: linear-gradient(90deg, rgba(14,165,233,0.12), rgba(99,102,241,0.12)); padding:10px 12px; border-radius:12px; border: 1px solid var(--rule); }
+    .toc a:hover { transform: translateY(-1px); box-shadow: 0 4px 14px rgba(2,6,23,0.08); }
+
+    /* HEADINGS */
+    h2 { margin: 8px 0 12px; font-size: 22px; position: relative; }
+    h2:after { content:""; display:block; height:4px; width: 80px; border-radius: 999px; margin-top:8px; background: linear-gradient(90deg, var(--accent-1), var(--accent-2)); }
+    h3 { margin: 12px 0 8px; font-size: 18px; }
+
+    p { margin: 10px 0; }
+    ul { margin: 6px 0 8px 20px; }
+    li { margin: 6px 0; }
+
+    .grid { display:grid; grid-template-columns: repeat(auto-fit, minmax(260px,1fr)); gap:16px; }
+
+    /* BADGES */
+    .badge { display:inline-block; padding:6px 10px; border:1px solid var(--rule); border-radius:999px; background:var(--badge-bg); color:#0b1220; font-size: 13px; margin: 0 8px 8px 0; }
+    /* category tints */
+    #pattern .grid > div:nth-child(1) .badge { background: rgba(99,102,241,0.12); }
+    #pattern .grid > div:nth-child(2) .badge { background: rgba(14,165,233,0.14); }
+    #pattern .grid > div:nth-child(3) .badge { background: rgba(16,185,129,0.14); }
+    #pattern .grid > div:nth-child(4) .badge { background: rgba(245,158,11,0.16); }
+
+    .callout { border-left:6px solid var(--accent-1); background: linear-gradient(90deg, rgba(14,165,233,0.12), rgba(99,102,241,0.12)); color:#0b1220; padding:12px 14px; border-radius:12px; }
+
+    .split { display:grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 18px; }
+    .pro li::marker { color: var(--accent-3); }
+    .con li::marker { color: #dc2626; }
+
+    .kv { display:grid; grid-template-columns: 1fr 3fr; gap: 8px 16px; }
+    .kv div:nth-child(odd) { color: var(--muted); }
+
+    footer { color: var(--muted); font-size: 13px; margin-top: 12px; text-align: center; }
+
+    @media print {
+      body { background: #fff; }
+      .wrap { margin: 0; max-width: 800px; }
+      .card { box-shadow: none; border-radius: 10px; }
+      a { color: black; text-decoration: none; }
+      header.hero { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+    }
   </style>
 </head>
 <body>
-  <h1>Virtues Assessment Report: Karin Strachan (Neutral Version)</h1>
-  <p><strong>Prepared using the Neutral Virtues Assessment Analysis Prompt • Australian English spelling • Matched structure and tone with Mark Glasson report</strong></p>
+  <main class="wrap">
+    <header class="hero">
+      <h1>Virtues Assessment Exhibit: Karin Strachan</h1>
+      <div class="sub">Neutral, evidence-based summary • Australian English • Matches Glasson companion report</div>
+    </header>
 
-  <section>
-    <h2>Executive Summary</h2>
-    <p>Karin Strachan’s assessment shows a pattern of achievement‑focused virtues balanced with compassion and service orientation. The data highlight consistent selections favouring excellence, industriousness, ambition, and truthfulness, complemented by generosity, service, and flexibility. This combination points to a leader who holds high standards while maintaining awareness of interpersonal and contextual factors.</p>
-    <p>The profile reflects both productive tendencies and potential constraints. The same drive that sustains performance may generate intensity or self‑expectations that are difficult for others to sustain. Karin notes conscious strategies to moderate her pace, indicating awareness of her impact on others.</p>
-  </section>
+    <section class="card">
+      <nav class="toc">
+        <a href="#summary">Executive Summary</a>
+        <a href="#pattern">Core Virtues Pattern</a>
+        <a href="#analysis">Pattern Analysis</a>
+        <a href="#tensions">Tensions & Trade-offs</a>
+        <a href="#implications">Leadership Implications</a>
+        <a href="#development">Development Areas</a>
+        <a href="#notes">Method & Notes</a>
+      </nav>
+    </section>
 
-  <section>
-    <h2>Core Virtues Pattern: “The Compassionate Achiever”</h2>
-    <ul>
-      <li><strong>Commitment to Excellence</strong> – frequent selection of achievement‑related virtues.</li>
-      <li><strong>Moral Courage and Truth‑Telling</strong> – preference for integrity and action over comfort or consensus.</li>
-      <li><strong>Compassionate Service</strong> – combining care for others with strong standards.</li>
-      <li><strong>Adaptive Pragmatism</strong> – demonstrating flexibility in applying judgement to context.</li>
-    </ul>
-    <p>These clusters together indicate a leadership style that aims for excellence and principled conduct, applied with empathy and practical awareness.</p>
-  </section>
+    <section id="summary" class="card">
+      <h2>Executive Summary</h2>
+      <p>Karin Strachan’s assessment indicates a clear pattern of achievement‑oriented virtues alongside service and compassion. Selections emphasise excellence, industriousness, ambition, and truthfulness, balanced by generosity, service, and flexibility. The same tendencies that drive performance can create intensity; Karin notes deliberate pacing to manage impact.</p>
+      <div class="kv" style="margin-top:10px;">
+        <div>Orientation</div><div>Achievement + integrity balanced with compassion</div>
+        <div>Delivery mode</div><div>Direct, decisive; moderated by context and pacing</div>
+        <div>Primary trade‑off</div><div>Truth/clarity vs diplomacy/relational ease</div>
+      </div>
+    </section>
 
-  <section>
-    <h2>Pattern Analysis</h2>
-    <h3>1. Commitment to Excellence</h3>
-    <p>Karin consistently selected virtues reflecting drive and discipline: <em>Excellence over Impact, Industriousness over Contentment, Ambition over Moderation, Self‑discipline over Self‑acceptance</em>, and <em>Practical Mastery over Intellectual Curiosity</em>. This pattern suggests focus on continuous improvement and high performance, balanced by intentional pacing practices she has developed.</p>
+    <section id="pattern" class="card">
+      <h2>Core Virtues Pattern</h2>
+      <div class="grid">
+        <div>
+          <h3>Commitment to Excellence</h3>
+          <span class="badge">Excellence</span>
+          <span class="badge">Industriousness</span>
+          <span class="badge">Ambition</span>
+          <span class="badge">Self‑discipline</span>
+          <span class="badge">Practical Mastery</span>
+        </div>
+        <div>
+          <h3>Moral Courage & Truth‑Telling</h3>
+          <span class="badge">Courage</span>
+          <span class="badge">Truthfulness</span>
+          <span class="badge">Righteous indignation</span>
+          <span class="badge">Advocacy</span>
+          <span class="badge">Leadership</span>
+        </div>
+        <div>
+          <h3>Compassionate Service</h3>
+          <span class="badge">Generosity</span>
+          <span class="badge">Compassion</span>
+          <span class="badge">Service</span>
+          <span class="badge">Magnanimity</span>
+        </div>
+        <div>
+          <h3>Adaptive Pragmatism</h3>
+          <span class="badge">Open‑mindedness</span>
+          <span class="badge">Acceptance</span>
+          <span class="badge">Flexibility</span>
+          <span class="badge">Practical wisdom</span>
+        </div>
+      </div>
+      <p class="callout">Theme: principled performance with human consideration, applied with situational judgement.</p>
+    </section>
 
-    <h3>2. Moral Courage and Truth‑Telling</h3>
-    <p>Selections of <em>Courage over Temperance, Truthfulness over Friendliness, Righteous Indignation over Patience, Advocacy over Diplomacy</em>, and <em>Leadership over Collaboration</em> indicate readiness to act decisively and express convictions directly. Karin’s reference to her South African background implies comfort with direct communication reinforced by cultural norms favouring candour.</p>
+    <section id="analysis" class="card">
+      <h2>Pattern Analysis</h2>
+      <div class="grid">
+        <div>
+          <h3>1) Excellence</h3>
+          <ul>
+            <li>Excellence &rarr; Impact</li>
+            <li>Industriousness &rarr; Contentment</li>
+            <li>Ambition &rarr; Moderation</li>
+            <li>Self‑discipline &rarr; Self‑acceptance</li>
+            <li>Practical Mastery &rarr; Intellectual Curiosity</li>
+          </ul>
+          <p>Focus on quality and sustained effort; uses deliberate pauses to maintain standards.</p>
+        </div>
+        <div>
+          <h3>2) Courage & Truth</h3>
+          <ul>
+            <li>Courage &rarr; Temperance</li>
+            <li>Truthfulness &rarr; Friendliness</li>
+            <li>Righteous Indignation &rarr; Patience</li>
+            <li>Advocacy &rarr; Diplomacy</li>
+            <li>Leadership &rarr; Collaboration</li>
+          </ul>
+          <p>Readiness to act and speak plainly; cultural comfort with directness.</p>
+        </div>
+        <div>
+          <h3>3) Service</h3>
+          <ul>
+            <li>Generosity &rarr; Justice</li>
+            <li>Compassion &rarr; Practical Help</li>
+            <li>Service &rarr; Reciprocity</li>
+            <li>Magnanimity (leadership stance)</li>
+          </ul>
+          <p>Balances standards with care; supports inclusion and psychological safety.</p>
+        </div>
+        <div>
+          <h3>4) Adaptability</h3>
+          <ul>
+            <li>Open‑mindedness &rarr; Conviction</li>
+            <li>Acceptance &rarr; Resilience</li>
+            <li>Flexibility &rarr; Consistency</li>
+            <li>Practical Wisdom &rarr; Theoretical Wisdom</li>
+          </ul>
+          <p>Adjusts approach to context while maintaining core values.</p>
+        </div>
+      </div>
+    </section>
 
-    <h3>3. Compassionate Service</h3>
-    <p>The combination of <em>Generosity over Justice, Compassion over Practical Help, Service over Reciprocity</em>, and <em>Magnanimity</em> reflects consistent attention to others’ welfare. These choices balance the achievement orientation, supporting an approach that couples expectation with support.</p>
+    <section id="tensions" class="card">
+      <h2>Tensions & Trade‑offs</h2>
+      <div class="grid">
+        <div>
+          <h3>Excellence ↔ Acceptance</h3>
+          <p>Pursuit of high standards paired with knowing when to redirect effort.</p>
+        </div>
+        <div>
+          <h3>Conviction ↔ Openness</h3>
+          <p>Principled stance with receptivity to alternate views; clarity remains important.</p>
+        </div>
+        <div>
+          <h3>Drive ↔ Pace</h3>
+          <p>Intensity moderated through deliberate pacing; can appear variable to others.</p>
+        </div>
+        <div>
+          <h3>Truth ↔ Relationships</h3>
+          <p>Direct communication supports integrity yet may strain diplomacy in sensitive settings.</p>
+        </div>
+      </div>
+    </section>
 
-    <h3>4. Adaptive Pragmatism</h3>
-    <p>Despite strong convictions, Karin’s data show flexibility: <em>Open‑mindedness over Conviction, Acceptance over Resilience, Flexibility over Consistency</em>, and <em>Practical Wisdom over Theoretical Wisdom</em>. This combination suggests context sensitivity and capacity to adapt behaviour to situational needs while maintaining standards.</p>
-  </section>
+    <section id="implications" class="card">
+      <h2>Leadership Implications</h2>
+      <div class="split">
+        <div>
+          <h3>Likely Strengths</h3>
+          <ul class="pro">
+            <li>High performance orientation with clear ethical standards.</li>
+            <li>Decisive action under ambiguity; maintains standards.</li>
+            <li>Combines achievement focus with empathy and care.</li>
+            <li>Self‑aware; moderates pace deliberately.</li>
+          </ul>
+        </div>
+        <div>
+          <h3>Potential Constraints</h3>
+          <ul class="con">
+            <li>Sustained pace may exceed others’ capacity.</li>
+            <li>Directness can limit diplomacy in sensitive contexts.</li>
+            <li>Perfection standards may delay completion.</li>
+            <li>High self‑criticism may reduce recovery.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
 
-  <section>
-    <h2>Detailed Virtues Analysis</h2>
-    <h3>Character Foundation</h3>
-    <ul>
-      <li><strong>Courage over Temperance:</strong> Prefers direct action while monitoring intensity through self‑management.</li>
-      <li><strong>Magnanimity over Humility:</strong> Oriented towards aspirational leadership, seeking to raise group performance.</li>
-      <li><strong>Generosity over Justice:</strong> Inclined to give beyond fairness, using generosity to temper demanding standards.</li>
-      <li><strong>Truthfulness over Friendliness:</strong> Values honesty, aware it can challenge relational harmony.</li>
-    </ul>
+    <section id="development" class="card">
+      <h2>Development Areas</h2>
+      <ul>
+        <li><strong>Diplomatic influence:</strong> Complement direct advocacy with sequencing, coalition‑building, timing, and silence.</li>
+        <li><strong>Self‑compassion & recovery:</strong> Integrate regeneration practices; model balanced effort.</li>
+        <li><strong>Cultural adaptability:</strong> Calibrate tone to audience norms; solicit feedback on impact.</li>
+        <li><strong>Pacing & delegation:</strong> Make pace expectations explicit; stepwise capability building; shared ownership of standards.</li>
+      </ul>
+    </section>
 
-    <h3>Decision‑Making Under Pressure</h3>
-    <ul>
-      <li><strong>Righteous Indignation over Patience:</strong> Responds promptly to perceived ethical or performance lapses.</li>
-      <li><strong>Practical Wisdom over Theoretical Wisdom:</strong> Relies on lived experience rather than abstract reasoning.</li>
-      <li><strong>Open‑mindedness over Conviction:</strong> Maintains flexibility within a clear moral frame.</li>
-      <li><strong>Decisiveness over Prudence:</strong> Prefers timely action, accepting risk of incomplete information.</li>
-    </ul>
-
-    <h3>Work and Achievement</h3>
-    <ul>
-      <li><strong>Industriousness over Contentment:</strong> Links fulfilment with consistent effort and high productivity.</li>
-      <li><strong>Ambition over Moderation:</strong> Sets demanding objectives and maintains strong internal drive.</li>
-      <li><strong>Excellence over Impact:</strong> Measures success by standard and precision of output.</li>
-      <li><strong>Acceptance over Resilience:</strong> Recognises when persistence no longer yields results and redirects energy.</li>
-    </ul>
-
-    <h3>Social and Community</h3>
-    <ul>
-      <li><strong>Leadership over Collaboration:</strong> Comfortable with authority and responsibility for direction.</li>
-      <li><strong>Compassion over Practical Help:</strong> Responds to emotional as well as practical needs.</li>
-      <li><strong>Service over Reciprocity:</strong> Contributes without expectation of return.</li>
-      <li><strong>Advocacy over Diplomacy:</strong> Voices concerns directly, with awareness of relational consequences.</li>
-    </ul>
-
-    <h3>Personal Growth</h3>
-    <ul>
-      <li><strong>Self‑discipline over Self‑acceptance:</strong> Maintains internal control and continuous improvement focus.</li>
-      <li><strong>Self‑criticism over Self‑compassion:</strong> Regular self‑evaluation may create pressure if unbalanced.</li>
-      <li><strong>Practical Mastery over Intellectual Curiosity:</strong> Applies knowledge for tangible outcomes.</li>
-      <li><strong>Flexibility over Consistency:</strong> Adjusts approach to context, sustaining core values.</li>
-    </ul>
-  </section>
-
-  <section>
-    <h2>Tensions and Trade‑offs</h2>
-    <ul>
-      <li><strong>Excellence–Acceptance:</strong> High standards coexist with recognition of limits. This supports sustainability but can create tension when expectations remain high under constraint.</li>
-      <li><strong>Conviction–Openness:</strong> Maintains principles while incorporating diverse perspectives. Clarity of stance is important to preserve authority.</li>
-      <li><strong>Drive–Pace:</strong> Conscious slowing of pace prevents burnout but can appear as variable momentum to others.</li>
-      <li><strong>Truth–Relationships:</strong> Direct expression supports integrity yet may strain collaboration when sensitivity is needed.</li>
-    </ul>
-  </section>
-
-  <section>
-    <h2>Leadership Implications</h2>
-    <h3>Likely Strengths</h3>
-    <ul>
-      <li>High achievement orientation combined with ethical clarity.</li>
-      <li>Ability to act decisively and maintain standards under pressure.</li>
-      <li>Integration of performance focus with empathy and care.</li>
-      <li>Self‑awareness and proactive adjustment of pace and approach.</li>
-    </ul>
-
-    <h3>Potential Constraints</h3>
-    <ul>
-      <li>Intensity may challenge colleagues with differing energy levels.</li>
-      <li>Direct communication style may limit diplomacy in sensitive environments.</li>
-      <li>Pursuit of perfection may delay action or increase workload.</li>
-      <li>High self‑criticism may reduce recovery and perspective.</li>
-    </ul>
-  </section>
-
-  <section>
-    <h2>Development Areas</h2>
-    <ul>
-      <li><strong>Diplomatic Influence:</strong> Continue refining indirect influence skills to complement direct advocacy; align messaging with stakeholder readiness.</li>
-      <li><strong>Self‑Compassion and Recovery:</strong> Reinforce balance between performance and regeneration; model sustainable effort for others.</li>
-      <li><strong>Cultural Adaptability:</strong> Calibrate communication style to suit varied cultural expectations; gather feedback on tone and approach.</li>
-      <li><strong>Pacing and Delegation:</strong> Clarify pace expectations; build team capacity progressively; share responsibility for quality outcomes.</li>
-    </ul>
-  </section>
-
-  <section>
-    <h2>Conclusion</h2>
-    <p>Karin Strachan’s profile reflects consistent alignment between ambition, ethical conviction, and compassion. Her approach integrates strong performance orientation with interpersonal care. The same tendencies that enable excellence can generate intensity; attention to diplomacy, pacing, and self‑kindness will further enhance leadership sustainability. The pattern overall describes a leader who achieves through clarity, service, and conscious balance between high standards and human connection.</p>
-  </section>
+    <footer>
+      Exhibit styled with brand‑ready colours and gradient header for side‑by‑side presentation and printing.
+    </footer>
+  </main>
 </body>
 </html>
